@@ -15,6 +15,12 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+const ButtonClickEvent = () => {
+  alert('보낼 데이터: ');
+}
+
+
+
 export default function BasicGrid() {
   return (
     <Box sx={{ flexGrow: 1, margin: 4 }}>
@@ -36,7 +42,7 @@ export default function BasicGrid() {
         </Grid>
         <Grid item xs={2}>
           <Item>
-            <BasicButton/>
+            <BasicButton onClick={ButtonClickEvent}/>
           </Item>
         </Grid>
       </Grid>
