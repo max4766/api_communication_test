@@ -23,19 +23,20 @@ export default function BasicGrid() {
   const [labValue, setLabValue] = useState(labName[0].value);
   const [yearValue, setYearValue] = useState(selectYear[0].value);
   const [monthValue, setMonthValue] = useState(selectMonth[0].value);
+  const [responseData, setResponseData] = useState(null);
 
   // 시험실 구분 SelectTextField의 값이 변경되었을 때 호출되는 핸들러
-  const handleLabChange = (event) => {
+  const LabChange = (event) => {
     setLabValue(event.target.value);
   };
 
   // 조회연도 SelectTextField의 값이 변경되었을 때 호출되는 핸들러
-  const handleYearChange = (event) => {
+  const YearChange = (event) => {
     setYearValue(event.target.value);
   };
 
   // 조회월 SelectTextField의 값이 변경되었을 때 호출되는 핸들러
-  const handleMonthChange = (event) => {
+  const MonthChange = (event) => {
     setMonthValue(event.target.value);
   };
 
@@ -55,6 +56,7 @@ export default function BasicGrid() {
     })
     .then(function (response) {
       console.log(response);
+      setResponseData(response.data);
     })
     .catch(function (error) {
       console.log(error);
@@ -62,44 +64,52 @@ export default function BasicGrid() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, margin: 4 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Item>
-            <SelectTextField 
-              label='시험실 구분' 
-              defaultValue={labName[0].value} 
-              data={labName} 
-              value={labValue} 
-              onChange={handleLabChange}/>
-          </Item>
+    <>
+      <Box sx={{ flexGrow: 1, margin: 4 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Item>
+              <SelectTextField 
+                label='시험실 구분' 
+                defaultValue={labName[0].value} 
+                data={labName} 
+                value={labValue} 
+                onChange={LabChange}/>
+            </Item>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>
+              <SelectTextField 
+                label='조회연도' 
+                defaultValue={selectYear[0].value} 
+                data={selectYear} 
+                value={yearValue} 
+                onChange={YearChange}/>
+            </Item>
+          </Grid>
+          <Grid item xs={3}>
+            <Item>
+              <SelectTextField 
+                label='조회월' 
+                defaultValue={selectMonth[0].value} 
+                data={selectMonth} 
+                value={monthValue} 
+                onChange={MonthChange}/>
+            </Item>
+          </Grid>
+          <Grid item xs={2}>
+            <Item>
+              <BasicButton onClick={ButtonClickSearch}/>
+            </Item>
+          </Grid>
         </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <SelectTextField 
-              label='조회연도' 
-              defaultValue={selectYear[0].value} 
-              data={selectYear} 
-              value={yearValue} 
-              onChange={handleYearChange}/>
-          </Item>
-        </Grid>
-        <Grid item xs={3}>
-          <Item>
-            <SelectTextField 
-              label='조회월' 
-              defaultValue={selectMonth[0].value} 
-              data={selectMonth} 
-              value={monthValue} 
-              onChange={handleMonthChange}/>
-          </Item>
-        </Grid>
-        <Grid item xs={2}>
-          <Item>
-            <BasicButton onClick={ButtonClickSearch}/>
-          </Item>
-        </Grid>
-      </Grid>
-    </Box>
+      </Box>
+      {/* Search 버튼 클릭 후 데이터 디스플레이 */}
+      {responseData && (
+        <Item sx={{ p: 2, margin: 4 }}>
+          <pre>{JSON.stringify(responseData, null, 2)}</pre>
+        </Item>
+      )}
+    </>
   );
 }
