@@ -7,7 +7,9 @@ import Grid from '@mui/material/Grid';
 import SelectTextField from './SelectTextField';
 import { labName, selectYear, selectMonth } from '../data/ObjectArrayData';
 import BasicButton from './BasicButton';
+import axios from 'axios';
 
+//Item 정의 : Paper 사용
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -37,8 +39,26 @@ export default function BasicGrid() {
     setMonthValue(event.target.value);
   };
 
+  //시험실 구분, 조회연도, 조회월 value값 전달
   const ButtonClickSearch = () => {
     alert('보낼 데이터: '+labValue+' / '+yearValue+' / '+monthValue);
+    
+    //axios 통신
+    axios({
+      method: 'get',
+      url: 'http://localhost:3000/memo',
+      params: {
+        labValue: labValue,
+        yearValue: yearValue,
+        monthValue: monthValue
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   };
 
   return (
