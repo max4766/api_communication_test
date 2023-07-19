@@ -17,10 +17,10 @@ import "@fontsource/noto-sans-kr/700.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-//App
+//App.js 불러오기
 import App from './App';
 
-//함수에 console.log를 넣어주면 개발창으로 앱의 퍼포먼스시간들을 분석하여 객체 형태로 보여줌
+//reportWebVitals 함수에 console.log를 넣어주면 개발창으로 앱의 퍼포먼스시간들을 분석하여 객체 형태로 보여줌
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
