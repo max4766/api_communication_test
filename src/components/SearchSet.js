@@ -37,6 +37,10 @@ export default function BasicGrid() {
     setMonthValue(event.target.value);
   };
 
+  const ButtonClickSearch = () => {
+    alert('보낼 데이터: '+labValue+' / '+yearValue+' / '+monthValue);
+  };
+
   return (
     <Box sx={{ flexGrow: 1, margin: 4 }}>
       <Grid container spacing={2}>
@@ -72,7 +76,7 @@ export default function BasicGrid() {
         </Grid>
         <Grid item xs={2}>
           <Item>
-            <BasicButton onClick={() => {alert('보낼 데이터: '+labValue+' / '+yearValue+' / '+monthValue);}}/>
+            <BasicButton onClick={ButtonClickSearch}/>
           </Item>
         </Grid>
       </Grid>
