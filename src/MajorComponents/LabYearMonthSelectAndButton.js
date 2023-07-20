@@ -45,12 +45,12 @@ export default function LabYearMonthSelectAndButton(){
       })
   }, []);
   
-  const [labValue, setLabValue] = useState('');
+  const [labNameValue, setLabNameValue] = useState('');
   const [yearValue, setYearValue] = useState('');
   const [monthValue, setMonthValue] = useState('');
 
-  const labValueChange = (event) => {
-    setLabValue(event.target.value);
+  const labNameValueChange = (event) => {
+    setLabNameValue(event.target.value);
   };
   const yearValueChange = (event) => {
     setYearValue(event.target.value);
@@ -60,14 +60,14 @@ export default function LabYearMonthSelectAndButton(){
   };
 
   const sendAllValuesAndGetData = () => {
-    alert('reqParam: '+labValue+" / "+yearValue+" / "+monthValue);
+    alert('reqParam: '+labNameValue+" / "+yearValue+" / "+monthValue);
   }
 
   return(
     <Box sx={{ m: 2 }}>
       <Grid container spacing={2}>
         <Grid item xs={3}>
-          <BasicSelect label={labNameDefault} data={labNames} onChange={labValueChange} value={labValue}/>
+          <BasicSelect label={labNameDefault} data={labNames} onChange={labNameValueChange} value={labNameValue}/>
         </Grid>
         <Grid item xs={3}>
           <BasicSelect label={yearDefault} data={years} onChange={yearValueChange} value={yearValue}/>
