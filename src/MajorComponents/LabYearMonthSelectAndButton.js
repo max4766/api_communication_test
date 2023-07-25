@@ -59,7 +59,7 @@ export default function LabYearMonthSelectAndButton(){
     setMonthValue(event.target.value);
   };
 
-  const sendAllValuesAndGetData = () => {
+  const checkReqParam = () => {
     alert('reqParam: '+labNameValue+" / "+yearValue+" / "+monthValue);
   }
 
@@ -76,7 +76,7 @@ export default function LabYearMonthSelectAndButton(){
           <BasicSelect label={monthDefault} data={months} onChange={monthValueChange} value={monthValue}/>
         </Grid>
         <Grid item xs={3}>
-          <BasicButton onClick={sendAllValuesAndGetData}/>
+          <BasicButton onClick={checkReqParam}/>
         </Grid>
       </Grid>
     </Box>
