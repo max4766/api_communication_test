@@ -2,9 +2,13 @@
 
 This is a [React](https://github.com/facebook/react) project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a demo web page(ETELAB) which is connected to private API server solving CORS issues.
+This is a demo web page(ETELAB) which is connected to private API server and share data `CORS`.
 
-You first get the data from the API server for the input form, 
+demo web page port = 3000
+
+API server port = 4000
+
+You first get the data from the API server for the input form in the demo web page, 
 
 then, send a packet to the API server by using the form.
 
