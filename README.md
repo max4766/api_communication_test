@@ -46,7 +46,7 @@ Next, run the development server with the command below :
 npm start
 ```
 
-and those under are for different use (we do not need those for now) :
+and those under are for different use (but we do not need those for now) :
 
 ```bash
 npm run test # Launches the test runner in the interactive watch mode #
