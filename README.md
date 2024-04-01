@@ -2,7 +2,9 @@
 
 This is a [React](https://github.com/facebook/react) project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a demo web page(ETELAB) which is connected to private API server and share data `CORS`.
+This is a demo web page(ETELAB) which is connected to private API server and share data. 
+
+`CORS`
 
 demo web page port = 3000
 
