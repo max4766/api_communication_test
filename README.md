@@ -49,11 +49,11 @@ npm start
 and those under are for different use ;
 
 ```bash
-npm run test ##
+npm run test # Launches the test runner in the interactive watch mode #
 
-npm run build ##
+npm run build # Builds the app for production to the build folder #
 
-npm run eject ##
+npm run eject # Remove the single build dependency from your project #
 
 ```
 
