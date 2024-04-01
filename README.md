@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a [React](https://github.com/facebook/react) project bootstrapped with [Create React App](https://github.com/facebook/create-react-app) AKA made with React.
+
+This is a demo web page(ETELAB) which is connected to private api server solving CORS issues.
+
+You first get the data from the api server for the input form, 
+
+then, send a packet to the api server by using the form.
+
+and then, get the requested data and show the result under the form.
+
+Axios enables you to send and get the data to and from the api server.
 
 ## Available Scripts
 
