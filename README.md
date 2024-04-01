@@ -57,10 +57,9 @@ npm run eject # Remove the single build dependency from your project #
 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4000](http://localhost:4000) with your browser to see the result.
 
 Congratulations! you can now see the view of this project! 
-
 
 ## Available Scripts
 
