@@ -12,11 +12,13 @@ API server port = 4000
 
 You first get the data from the API server for the input form in the demo web page, 
 
-then, send a packet to the API server by using the form.
+then, send a packet to the API server by using the form in the demo web page.
 
-and then, get the requested data and show the result under the form.
+and then, get the requested data from the API server,
 
-Axios enables you to send and get the data to and from the API server.
+show the result under the form in the demo web page.
+
+Axios enables you to get and send the data from and to the API server through the demo web page.
 
 ## Available Scripts
 
