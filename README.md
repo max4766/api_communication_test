@@ -59,7 +59,15 @@ npm run eject # Remove the single build dependency from your project #
 
 Open [http://localhost:4000](http://localhost:4000) with your browser to see the result.
 
-Congratulations! you can now see the view of this project! 
+Though you access, multiple error will be detected.
+
+This is because API server (port 3000) is currently not working due to 
+
+Maria DB, which is the database for the api server is no longer usable. 
+
+The demo page will return 500 error.
+
+Need to find a solution for this issue.
 
 ## Available Scripts
 
