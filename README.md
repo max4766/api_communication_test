@@ -22,6 +22,46 @@ show the result under the form in the demo web page.
 
 `MUI` is used for form UI.
 
+## Getting Started
+
+First, copy this project's URL and clone this project into your local with git :
+
+```bash
+git clone [project URL]
+```
+
+FYI, No need to make a new folder for this project. 
+
+it is already packed in the folder with it's project name when you clone.
+
+Then, recover packages. update node_modules with the command below :
+
+```bash
+npm install
+```
+
+Next, run the development server with the command below :
+
+```bash
+npm start
+```
+
+and those under are for different use ;
+
+```bash
+npm run test ##
+
+npm run build ##
+
+npm run eject ##
+
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+Congratulations! you can now see the view of this project! 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
