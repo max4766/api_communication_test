@@ -16,10 +16,6 @@ by an alert showing out after clicking search button.
 
 ## Getting Started
 
-API server port = 3000
-
-demo web page port = 4000
-
 First, copy this project's URL and clone this project into your local with git :
 
 ```bash
@@ -28,7 +24,7 @@ git clone [project URL]
 
 FYI, No need to make a new folder for this project. 
 
-it is already packed in the folder with it's project name when you clone.
+It is already packed in the folder with it's project name when you clone.
 
 Then, recover packages. update node_modules with the command below :
 
@@ -36,34 +32,29 @@ Then, recover packages. update node_modules with the command below :
 npm install
 ```
 
+Next, Install json-server globally. If you already have it in your local, you don't need to.
+
+```bash
+npm i -g json-server
+```
+
+Next, run the API server with the command below :
+
+```bash
+json-server --watch src/fakeServer/db.json
+```
+
+You can now check localhost:3000 is used as an API server after running the command above.
+
 Next, run the development server with the command below :
 
 ```bash
 npm start
 ```
 
-and those under are for different use (but we do not need those for now) :
-
-```bash
-npm run test # Launches the test runner in the interactive watch mode #
-
-npm run build # Builds the app for production to the build folder #
-
-npm run eject # Remove the single build dependency from your project #
-
-```
-
 Open [http://localhost:4000](http://localhost:4000) with your browser to see the result.
 
-Though you access, multiple error will be detected.
-
-This is because API server (port 3000) is currently not working due to 
-
-Maria DB, which is the database for the api server is no longer usable. 
-
-The demo page will return 500 error.
-
-Need to find a solution for this issue.
+Congratulation! You can finally see the view of this project!
 
 ## About the source
 
