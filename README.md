@@ -4,13 +4,15 @@ This is a [React](https://github.com/facebook/react) project bootstrapped with [
 
 This is a demo web page(ETELAB) that gets data which is required for input components from an API server.
 
-In this porject, `json-server` is used to make a fake server. 
+In this porject, `json-server` is used to make a fake server.
 
-It is possible to check if the value for the packet is correctly set and ready by an alert showing out after clicking search button.
-
-In this project, `Axios` enables you to get data from the API Server(localhost:3000) for the web page(localhost:4000).
+`Axios` enables you to get data from the API Server(localhost:3000) for the web page(localhost:4000).
 
 `MUI` is used for input form UI.
+
+It is possible to check if the value for the packet is correctly set and ready 
+
+by an alert showing out after clicking search button.
 
 ## Getting Started
 
