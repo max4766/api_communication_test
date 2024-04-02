@@ -2,27 +2,21 @@
 
 This is a [React](https://github.com/facebook/react) project bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This is a demo web page(ETELAB) which is connected to private API server and share data. 
+This is a demo web page(ETELAB) that gets data which is required for input components from an API server.
 
-`CORS`
+In this porject, `json-server` is used to make a fake server. 
 
-demo web page port = 4000
+It is possible to check if the value for the packet is correctly set and ready by an alert showing out after clicking search button.
+
+In this project, `Axios` enables you to get data from the API Server(localhost:3000) for the web page(localhost:4000).
+
+`MUI` is used for input form UI.
+
+## Getting Started
 
 API server port = 3000
 
-You first get the data from the API server for the input form in the demo web page, 
-
-then, send a packet to the API server by using the form in the demo web page.
-
-and then, get the requested data from the API server,
-
-show the result under the form in the demo web page.
-
-`Axios` enables you to get and send the data from and to the API server through the demo web page.
-
-`MUI` is used for form UI.
-
-## Getting Started
+demo web page port = 4000
 
 First, copy this project's URL and clone this project into your local with git :
 
